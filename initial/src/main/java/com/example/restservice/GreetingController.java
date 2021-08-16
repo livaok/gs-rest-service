@@ -21,8 +21,8 @@ public class GreetingController {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
-	@GetMapping
-	public String hello() {
-		return "Hello";
+	@GetMapping("/error")
+	public String error() {
+		return "ERROR";
 	}
 }
