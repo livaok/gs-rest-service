@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @author liva
  */
 
-@RestController
+@RestController("/")
 public class GreetingController {
 
 	private static final String     template = "Hello, %s!";
@@ -21,8 +21,8 @@ public class GreetingController {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 
-	@GetMapping("/error")
-	public String error() {
-		return "ERROR";
+	@GetMapping("/hello")
+	public String hello(@RequestParam(value = "name", defaultValue = "Anon") String name) {
+		return "hello" + name;
 	}
 }
