@@ -73,6 +73,12 @@ include::initial/build.gradle[]
 ----
 ====
 
+
+
+
+
+
+
 === Manual Initialization (optional)
 
 If you want to initialize the project manually rather than use the links shown earlier, follow the steps given below:
